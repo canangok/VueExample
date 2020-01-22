@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+    </head>
+    
+<body>
+    <div id="app">
+        <div class="container mt-4">
+            <vue-cart v-bind:productcart="productcart" type="shoppingCart" title="Shopping Cart"
+             v-bind:category="categories" 
+             v-on:itemchangeoncart="handleItemChange" 
+             v-on:filtercategory="filter"></vue-cart>
+
+            <vue-cart v-bind:productcart="saved" type="savedCart" title="Saved For Later"
+             v-on:itemchangeoncart="handleItemChange" ></vue-cart>
+        </div>
+
+    </div>
+   
+</body>
+
+</html>
